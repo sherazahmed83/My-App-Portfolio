@@ -2,13 +2,22 @@
     <string name="app_name">My App Portfolio</string>
 
     <string name="my_title">My Nanodegree Apps!</string>
+
+    <!-- Text for Buttons -->
     <string name="media_streamer">SPOTIFY STREAMER</string>
     <string name="super_duo1">SCORES APP</string>
     <string name="super_duo2">LIBRARY APP</string>
     <string name="ant_terminator">BUILD IT BIGGER</string>
     <string name="materialize">BACON READER</string>
     <string name="capstone">CAPSTONE: MY OWN APP</string>
-    <string name="message">This button will launch my</string>
-    <string name="message_capstone">capstone</string>
+
+    <!-- Text messages to show on main screen -->
+    <string name="message_media_streamer">This button will launch my Spotify Streamer app!</string>
+    <string name="message_super_duo1">This button will launch my Scores app!</string>
+    <string name="message_super_duo2">This button will launch my Library app!</string>
+    <string name="message_ant_terminator">This button will launch my Build It Bigger app!</string>
+    <string name="message_materialize">This button will launch my Bacon Reader app!</string>
+    <string name="message_capstone">This button will launch my capstone app!</string>
+
     <string name="action_settings">Settings</string>
 </resources>

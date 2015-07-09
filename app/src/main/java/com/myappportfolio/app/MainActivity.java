@@ -6,7 +6,6 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.Toast;
 
 
@@ -45,13 +44,34 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void sendMessage(View view) {
-        Log.d(LOG_TAG, "sendMessage() method is called");
-        Button button = (Button) view;
+        Log.d(LOG_TAG, "sendMessage() method");
 
-        if(((Button) view).getText().equals(getString(R.string.capstone))) {
-            Toast.makeText(view.getContext(), getString(R.string.message) + " " + getString(R.string.message_capstone) + " app!", Toast.LENGTH_SHORT).show();
-        } else {
-            Toast.makeText(view.getContext(), getString(R.string.message) + " " + button.getText() + " app!", Toast.LENGTH_SHORT).show();
+        String message = "";
+
+        switch (view.getId()) {
+            case R.id.media_streamer:
+                message = getString(R.string.message_media_streamer);
+                break;
+            case R.id.super_duo1:
+                message = getString(R.string.message_super_duo1);
+                break;
+            case R.id.super_duo2:
+                message = getString(R.string.message_super_duo2);
+                break;
+            case R.id.ant_terminator:
+                message = getString(R.string.message_ant_terminator);
+                break;
+            case R.id.materialize:
+                message = getString(R.string.message_materialize);
+                break;
+            case R.id.capstone:
+                message = getString(R.string.message_capstone);
+                break;
+            default:
+                message = "Not a valid Id for the views!";
+                break;
         }
+
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
 }
