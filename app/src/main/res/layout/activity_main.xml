@@ -1,3 +1,10 @@
+<!--
+Change Log: (as suggested by Udactiy Team)
+On 07/09/2015
+1- Separate repeated blocks of attributes to the styles.xml file
+   and then include them as a button style attribute in layout file (e.g. activity_main.xml)
+-->
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -16,99 +23,40 @@
         android:shadowColor="#ff856ef1" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:text="@string/media_streamer"
         android:id="@+id/media_streamer"
-        android:layout_gravity="center_horizontal"
         android:layout_marginTop="30dp"
-        android:singleLine="false"
-        android:textStyle="bold"
-        android:minWidth="200dp"
-        android:minHeight="50dp"
-        android:textColor="#ff1100f0"
-        android:background="@drawable/button_selector"
-        android:shadowColor="#ffdfeaf1"
-        android:onClick="sendMessage"/>
+        style="@style/ButtonStyle"
+        />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:text="@string/super_duo1"
         android:id="@+id/super_duo1"
-        android:layout_gravity="center_horizontal"
         android:layout_marginTop="15dp"
-        android:singleLine="false"
-        android:textStyle="bold"
-        android:minWidth="200dp"
-        android:minHeight="50dp"
-        android:textColor="#ff1100f0"
-        android:background="@drawable/button_selector"
-        android:shadowColor="#fff4ab47"
-        android:onClick="sendMessage"/>
+        style="@style/ButtonStyle"/>
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:text="@string/super_duo2"
         android:id="@+id/super_duo2"
-        android:layout_gravity="center_horizontal"
         android:layout_marginTop="15dp"
-        android:singleLine="false"
-        android:textStyle="bold"
-        android:minWidth="200dp"
-        android:minHeight="50dp"
-        android:textColor="#ff1100f0"
-        android:background="@drawable/button_selector"
-        android:shadowColor="#fff4ab47"
-        android:onClick="sendMessage"/>
+        style="@style/ButtonStyle"/>
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:text="@string/ant_terminator"
         android:id="@+id/ant_terminator"
-        android:layout_gravity="center_horizontal"
         android:layout_marginTop="15dp"
-        android:singleLine="false"
-        android:textStyle="bold"
-        android:minWidth="200dp"
-        android:minHeight="50dp"
-        android:textColor="#ff1100f0"
-        android:background="@drawable/button_selector"
-        android:shadowColor="#fff4ab47"
-        android:onClick="sendMessage"/>
+        style="@style/ButtonStyle"/>
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:text="@string/materialize"
         android:id="@+id/materialize"
-        android:layout_gravity="center_horizontal"
         android:layout_marginTop="15dp"
-        android:singleLine="false"
-        android:textStyle="bold"
-        android:minWidth="200dp"
-        android:minHeight="50dp"
-        android:textColor="#ff1100f0"
-        android:background="@drawable/button_selector"
-        android:shadowColor="#fff4ab47"
-        android:onClick="sendMessage"/>
+        style="@style/ButtonStyle"/>
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:text="@string/capstone"
         android:id="@+id/capstone"
-        android:layout_gravity="center_horizontal"
         android:layout_marginTop="15dp"
-        android:singleLine="false"
-        android:textStyle="bold"
-        android:minWidth="200dp"
-        android:minHeight="50dp"
-        android:textColor="#ffffffff"
-        android:background="@drawable/button_selector_myapp"
-        android:shadowColor="#fff4ab47"
-        android:onClick="sendMessage"/>
+        style="@style/MyAppButtonStyle"/>
 
 </LinearLayout>

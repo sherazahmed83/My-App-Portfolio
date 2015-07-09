@@ -4,14 +4,22 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+/**
+ * Change Log: (as suggested by Udacity Team)
+ * On 07/09/2015
+ *
+ * 1- Remove onOptionsItemSelected() because there is no use of this in our application
+ * 2- Make a member variable of Toast
+ * 3- When user clicks on any other button then cancel the previous Toast if exits, and lauch the new one
+ */
 
 public class MainActivity extends ActionBarActivity {
 
     private static final String LOG_TAG = MainActivity.class.getSimpleName();
+    private Toast mToast;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,21 +34,6 @@ public class MainActivity extends ActionBarActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
     }
 
     public void sendMessage(View view) {
@@ -72,6 +65,11 @@ public class MainActivity extends ActionBarActivity {
                 break;
         }
 
-        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+        if (mToast != null) {
+            mToast.cancel();
+        }
+
+        mToast = Toast.makeText(this, message, Toast.LENGTH_SHORT);
+        mToast.show();
     }
 }
